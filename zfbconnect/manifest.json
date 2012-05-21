@@ -1,0 +1,13 @@
+{
+  "name": "ZFBConnect",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "ZFBConnect Extension - to connect to Facebook",
+  "browser_action": {
+    "default_icon": "zfbc.png",
+    "default_popup": "zfbconnect.html"
+  },
+  "permissions": [
+    "http://www.facebook.com"
+  ]
+}
