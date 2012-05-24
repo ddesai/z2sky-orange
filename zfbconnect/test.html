@@ -1,0 +1,45 @@
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>
+  FB.init({
+    appId  : '355220691211825',
+    status : true, // check login status
+    cookie : true, // enable cookies to allow the server to access the session
+    xfbml  : true  // parse XFBML
+  });
+  FB.getLoginStatus(function(response){
+//    (response.session) ? showAccountInfo(): showLoginButton();
+	(response.session) ? document.writeln("Success") : document.writeln("Fail");
+   });
+
+/*
+FB.api('/me/friends', function(response) {
+  document.writeln(response.data.length);
+  });
+
+  friendCount = response.data.length;
+  for (i=0; i<friendCount; i++) {
+    friendId = response.data[i].id;
+    FB.api('/'+friendId, function(response) {
+      if (response.birthday)
+        resultList.push(new Array(response.id).concat(response.birthday));
+      friendCount--;
+    });
+  }
+*/
+
+
+/*   FB.api("/me/friends?fields=id,name,birthday,picture, link", dojo.hitch(this, function(response) {
+    var birthdays = response.data; //list of friend objects from facebook
+	dojo.forEach(birthdays, function(item) {
+        if (item.birthday) {
+            var bday = item.birthday;
+		document.writeln("Birthday : "+bday);
+
+	} 
+
+    });
+
+*/
+
+</script>
